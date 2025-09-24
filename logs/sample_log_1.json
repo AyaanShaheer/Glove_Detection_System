@@ -1,0 +1,24 @@
+{
+  "filename": "480797_jpg.rf.52b1dd5fa2ff2ca15f253ecb71d16d41.jpg",
+  "detections": [
+    {
+      "label": "bare_hand",
+      "confidence": 0.8889789581298828,
+      "bbox": [
+        42,
+        62,
+        408,
+        413
+      ]
+    }
+  ],
+  "processed_at": "2025-09-24T05:26:54.894152",
+  "model_confidence_threshold": 0.3,
+  "improvements_applied": [
+    "Enhanced preprocessing with CLAHE",
+    "Dual image processing (original + enhanced)",
+    "Improved hand classification with multiple features",
+    "Custom NMS for better duplicate removal",
+    "Lower confidence threshold with post-processing"
+  ]
+}
