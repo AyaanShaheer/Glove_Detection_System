@@ -1,0 +1,186 @@
+# Glove Detection Project - .gitignore
+# Keeps only essential files for submission
+
+# ================================
+# PYTHON RELATED
+# ================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+glove_detection_project/
+
+# ================================
+# MACHINE LEARNING RELATED
+# ================================
+# Large dataset files (keep only sample data)
+dataset/train/images/
+dataset/valid/images/ 
+dataset/test/images/
+dataset/train/labels.cache
+dataset/test/labels.cache
+
+# Exclude large training dataset but keep structure
+dataset/train/labels/
+dataset/test/labels/
+dataset/valid/
+
+# YOLOv8 downloads and cache
+*.pt
+!best.pt
+!last.pt
+yolov8*.pt
+
+# Training runs (keep only final results)
+runs/detect/*/
+!runs/detect/glove_detection/weights/
+!runs/detect/glove_detection/results.png
+!runs/detect/glove_detection/confusion_matrix.png
+!runs/detect/glove_detection/labels.jpg
+
+# Ultralytics cache and temp files
+.ultralytics/
+ultralytics/
+
+# ================================
+# PROJECT SPECIFIC
+# ================================
+# Input images (too large for submission)
+input_images/
+!input_images/sample_*.jpg
+
+# All output except samples
+output/
+logs/
+!output/sample_*.jpg
+!logs/sample_*.json
+
+# Temporary and working files
+*.tmp
+*.temp
+temp/
+tmp/
+working/
+
+# VS Code and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ================================
+# SUBMISSION SPECIFIC
+# ================================
+# Keep only essential submission files:
+# - Main scripts (glove_detection_v2.py, train_glove_model.py)
+# - Documentation (README.md)
+# - Requirements (requirements.txt)
+# - Trained model weights (best.pt, last.pt)
+# - Sample outputs (3-5 images and JSON files)
+# - Configuration files
+
+# Ignore development files
+test_*.py
+debug_*.py
+experiment_*.py
+playground.py
+scratch.py
+
+# Ignore large raw datasets
+*.zip
+*.tar.gz
+*.rar
+original_dataset/
+
+# Log files
+*.log
+*.out
+
+# Jupyter notebooks (unless specifically needed)
+*.ipynb
+.ipynb_checkpoints/
+
+# ================================
+# WHAT TO KEEP (SUBMISSION READY)
+# ================================
+# Core Scripts:
+# ✅ glove_detection_v2.py
+# ✅ train_glove_model.py
+# ✅ create_submission.py
+# ✅ requirements.txt
+# ✅ README.md
+
+# Model & Results:
+# ✅ runs/detect/glove_detection/weights/best.pt
+# ✅ runs/detect/glove_detection/weights/last.pt
+# ✅ runs/detect/glove_detection/results.png
+# ✅ runs/detect/glove_detection/confusion_matrix.png
+
+# Sample Data:
+# ✅ output/sample_*.jpg (3-5 annotated images)
+# ✅ logs/sample_*.json (3-5 detection logs)
+# ✅ dataset/data.yaml (dataset configuration)
+
+# Configuration:
+# ✅ corrected_data.yaml
+# ✅ .gitignore
